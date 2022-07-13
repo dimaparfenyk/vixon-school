@@ -1,0 +1,248 @@
+:root {
+    --main-background-color:#F4FFF6;
+    --primary-text-color: #0B221C;
+    --second-text-color: #ffffff;
+    --button-main-font-color: #2E3034;
+    --active-component-color: #6BBC60;
+    --main-button-color:#FFB539;
+}
+
+
+/* --------------------Cброс стилей----------------------- */
+p,
+h1,
+h2,
+h3,
+ul {
+    margin: 0;
+}
+
+ul {
+    padding-left: 0;
+    list-style: none;
+    padding: 0px;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+input {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    border: none;
+}
+
+body {
+    background: var(--main-background-color);
+    color: var(--primary-text-color);
+    font-family: Nunito Sans, Roboto, Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    padding: 0 100px;
+}
+
+/* --------------------HEADER-------------------------------- */
+
+nav{
+display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 100px;
+    
+}
+
+.header__list{
+    display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        margin:0 auto
+}
+.header__list a{
+    display: inline-block;
+    padding: 20px 0;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 19px;
+    color: inherit;
+}
+
+/* .header__list li{
+    
+} */
+
+.header__list li:not(:last-child){
+margin-right: 48px;
+}
+
+.lang-box{
+    margin-right: 60px;
+}
+
+.lang-box__link{
+    font-size: 16px;
+    line-height: 22px;
+}
+
+.header__tel__box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.header__tel__box span{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    
+    border-radius: 4px;
+    padding: 14px 20px;
+    margin-bottom: 12px;
+    min-width: 180px;
+
+    color: white;
+    background: #0B221C;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.header__tel__box a{
+    color: inherit;
+    line-height: 19px;
+    /* padding: 14px 72px; */
+}
+
+/*---------------------------HERO SECTION------------------------------ */
+
+.hero{
+    background-size: cover;
+    position: relative;
+        max-width: 1600px;
+        width: 100%;
+        /* height: 100%; */
+        /* padding-top: 168px; */
+        padding: 168px 100px;
+        margin: 0 auto;
+    background: linear-gradient(180deg, #6BBC60 0%, #56A04C 44.6%, #55A04A 61.84%, #6BBC60 100%);
+}
+
+/* .hero-container{
+    position: relative;
+    padding-right: 100px;
+    padding-left: 100px;
+} */
+
+.hero__content__title{
+    color: var(--second-text-color);
+    max-width: 307px;
+    margin-bottom: 28px;
+
+    font-weight: 800;
+        font-size: 48px;
+        line-height: 65px;
+}
+
+.hero__content__text{
+    max-width: 450px;
+    margin-bottom: 36px;
+
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 27px;
+    color: var(--second-text-color);
+    text-shadow: 3px 3px 6px rgba(21, 20, 8, 0.25);
+}
+
+.btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    border: none;
+    min-width: 200px;
+    background-color: var(--main-button-color);
+    box-shadow: 0px 4px 4px rgb(0 0 0 / 15%);
+    color: var(--primary-text-color);
+    font-family: inherit;
+    border: none;
+    cursor: pointer;
+
+    flex-direction: row;
+    padding: 0px;
+    width: 285px;
+    height: 48px;
+}
+
+.hero-img{
+  position: absolute;
+  bottom: 0;
+  right: 20%;
+
+}
+
+/* ---------------------------SECTION COURSES------------------- */
+
+.courses{
+    
+    padding: 80px 100px;
+}
+.subtitle{
+margin-bottom: 48px;
+text-align: center;
+font-weight: 700;
+font-size: 40px;
+line-height: 55px;
+text-transform: uppercase;
+color: var(--primary-text-color);
+}
+
+.courses-box__list{
+display: flex;
+flex-wrap: wrap;
+flex-direction: row;
+align-items: center;
+justify-content: center;
+}
+
+
+.courses-box__list div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 222px;
+    height: 222px;
+    border-radius: 50%;
+    background: #6BBC60;
+}
+.courses-box__list li{
+position: relative;
+margin-right: 73px;
+}
+.courses-box__list button{
+    position: absolute;
+    left: 0;
+    bottom: -25px;
+    width: 100%;
+    height: 68px;
+    background:var(--main-background-color);
+    box-shadow: 1.57705px 4.73116px 11.0394px rgba(153, 175, 153, 0.25);
+    border-radius: 6px;
+    border: none;
+}
+
+
+
+
+
+
