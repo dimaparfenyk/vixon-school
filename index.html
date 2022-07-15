@@ -106,16 +106,27 @@
 
     <!-- ----------------------------------SECTION HERO----------------------- -->
 
-    <section class="hero section">
-        <div  class="hero-container container">
+    <section class="hero">
+        
         <div class="hero__content">
-            <h1 class="hero__content__title">Вітаємо в Vixon School</h1>
-            <p class="hero__content__text">Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of
-            type and scrambled it to make a type specimen book.</p>
-            <button type="button" class="hero__btn btn">Записатись</button>
-        </div>
-        <img class="hero-img" src="./images/hero-img.png" alt="">
-        </div>
+            <div class="hero_textbox">
+                <h1 class="hero_title">Вітаємо в Vixon School</h1>
+                <p class="hero_text">Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of
+                type and scrambled it to make a type specimen book.</p>
+                <button type="button" class="hero__btn btn">Записатись</button>
+            </div>
+        
+        <picture>
+            <source srcset="./images/hero/hero-1x.png 1x, 
+                                        ./images/hero/hero-2x.png 2x" media="(min-width:1280px)">
+            <source srcset="./images/hero/hero-1x.png 1x, 
+                                        ./images/hero/hero-2x.png 2x" media="(min-width:768px)">
+            <source srcset="./images/hero/hero-1x.png 1x, 
+                                        ./images/hero/hero-2x.png 2x" media="(min-width:320px)">
+            <img class="hero-img" src="./images/hero/hero-1x.png" alt="childrens" width="171" />
+        </picture>
+    </div>
+        
     </section>
 
     <!-- ------------------------------SECTION COURSES--------------------------------- -->
