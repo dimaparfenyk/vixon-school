@@ -280,8 +280,15 @@ a {
 .hero{
     width: 100%;
     margin: 0 auto;
-    background-image: linear-gradient(180deg, #6BBC60 0%, #56A04C 44.6%, #55A04A 61.84%, #6BBC60 100%);
+    background-image:linear-gradient(180deg, #6BBC60 0%, #56A04C 44.6%, #55A04A 61.84%, #6BBC60 100%);
 }
+@media screen and (max-width: 1199px) {
+.hero{
+    background-image: url('../images/hero/bottom-bg-img.png'),
+    linear-gradient(180deg, #6BBC60 0%, #56A04C 44.6%, #55A04A 61.84%, #6BBC60 100%);
+    background-repeat: no-repeat;
+    background-position: left -100px bottom -140px, left bottom;
+}}
 
 .hero >.container {
     display: flex;
@@ -291,6 +298,10 @@ a {
     position:static;
     padding-top: 50px;
     padding-bottom: 50px;
+    background-repeat: no-repeat;
+    background-image: url('../images/hero/right-bg-img.png');
+    background-position: right -130px top 50%, right top;
+
 }
 @media screen and (min-width: 768px) {
     .hero>.container {
@@ -298,13 +309,48 @@ a {
         position: relative;
         padding-top: 128px;
         padding-bottom: 166px;
+        background-repeat: no-repeat;
+        background-image:url('../images/hero/right-bg-img.png');
+        background-position: right -200px top -130px, right top;
     }
 }
+@media screen and (max-width: 1199px) {
+    .hero>.container {
+        background-size: 50%;
+    }
+}
+@media screen and (min-width: 1200px) {
+    .hero>.container {
+        background-repeat: no-repeat;
+        background-image: url('../images/hero/Group-bg-img.png');
+        background-position: left 0 bottom -180px, left bottom;
+        }
+    }
 @media screen and (min-width: 1280px) {
     .hero>.container {
         padding-left: 100px;
         padding-right: 100px;
+
     }
+}
+
+.top-bg-img {
+    display: none;
+}
+@media screen and (min-width: 768px) {
+    .top-bg-img {
+        display: block;
+        position: absolute;
+        top: -80px;
+        left: 145px;
+    }
+}
+@media screen and (min-width: 1200px) {
+.top-bg-img{
+    position: absolute;
+    top: -80px;
+    left: 430px;
+}
 }
 
 .hero_title {
