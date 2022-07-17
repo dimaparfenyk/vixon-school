@@ -1,3 +1,6 @@
+*{
+    box-sizing: border-box;
+}
 :root {
     --main-background-color:#F4FFF6;
     --primary-text-color: #0B221C;
@@ -47,54 +50,30 @@ a {
     text-decoration: none;
 }
 
-/* .container {
-    max-width: 1270px;
-    margin: 0 auto;
-    padding: 0 15px;
-}
-
-@media (max-width: 1200px) {
-    .container {
-        max-width: 970px;
-    }
-}
-
-@media (max-width: 991px) {
-    .container {
-        max-width: 750px;
-    }
-}
-
-@media (max-width: 768px) {
-    .container {
-        max-width: 600px;
-    }
-} */
-
 .container {
     margin: 0 auto;
     padding-left: 15px;
-    padding-right: 15px;}
-
+    padding-right: 15px;
+    max-width: 1270px;
+}
     @media screen and (min-width: 480px) {
         .container{
         max-width: 480px;
     }
-    }
-
+}
     @media screen and (min-width: 768px) {
         .container {
         max-width: 768px;
-    }}
-
+    }
+}
     @media screen and (min-width: 1200px) {
         .container {
-             max-width: 1200px;
-            }
-        }
-    @media screen and (min-width: 1280px) {
+        max-width: 1200px;
+    }
+}
+    @media screen and (min-width: 1270px) {
         .container {
-        max-width: 1280px;
+        max-width: 1270px;
         }
     }
 
@@ -116,12 +95,7 @@ a {
     justify-content: space-between;
     }
 }
-@media screen and (min-width: 1280px) {
-    .nav {
-        padding-left: 100px;
-        padding-right: 100px;
-    }
-}
+
 
 .logo{
     width: 70px;
@@ -201,6 +175,7 @@ a {
 
 .header-btn{
     border:none;
+    cursor: pointer;
     width: 40px;
     height: 40px;
     background-color: inherit;
@@ -226,6 +201,7 @@ a {
         margin-bottom: 12px;
         width: 150px;
         height: 28px;
+        cursor: pointer;
         
         text-transform: uppercase;
         font-weight: 700;
@@ -280,52 +256,30 @@ a {
 .hero{
     width: 100%;
     margin: 0 auto;
-    background-image:linear-gradient(180deg, #6BBC60 0%, #56A04C 44.6%, #55A04A 61.84%, #6BBC60 100%);
-}
-@media screen and (max-width: 1199px) {
-.hero{
-    background-image: url('../images/hero/bottom-bg-img.png'),
+    background-image: url('../images/hero/group-bg.png'),
     linear-gradient(180deg, #6BBC60 0%, #56A04C 44.6%, #55A04A 61.84%, #6BBC60 100%);
     background-repeat: no-repeat;
-    background-position: left -100px bottom -140px, left bottom;
-}}
+    background-position: top -100px left 0, bottom left;
+}
+
 
 .hero >.container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    position:static;
-    padding-top: 50px;
-    padding-bottom: 0px;
-    background-repeat: no-repeat;
-   
-    background-image: url('../images/hero/right-bg-img.png');
-    background-position: right -130px top 50%, right top;
+    padding-top: 60px;
 }
 @media screen and (min-width: 768px) {
     .hero>.container {
-        display: block;
         position: relative;
+        padding-top: 60px;
+        padding-bottom: 100px;
+    }
+}
+@media screen and (min-width: 991px) {
+    .hero>.container {
         padding-top: 128px;
         padding-bottom: 166px;
-        background-image:url('../images/hero/right-bg-img.png');
-        background-position: right -200px top -130px, right top;
     }
 }
-@media screen and (max-width: 1200px) {
-    .hero>.container {
-        background-size: 50%;
-    }
-}
-@media screen and (min-width: 1200px) {
-    .hero>.container {
-        background-repeat: no-repeat;
-        background-size: auto;
-        background-image: url('../images/hero/Group-bg-img.png');
-        background-position: left 0 bottom -180px, left bottom;
-        }
-    }
+
 
 .top-bg-img {
     display: none;
@@ -364,13 +318,11 @@ a {
 display: flex;
 flex-direction: column;
 justify-content: center;
-align-items: center;
 }
 }
 .hero_text{
     max-width: 360px;
     margin-bottom: 24px;
-    text-align: justify;
     font-weight: 400;
     font-size: 18px;
     line-height: 25px;
@@ -413,8 +365,8 @@ align-items: center;
     background-color:#f7a71c;
 }
 @media screen and (max-width: 767px) {
-    .hero .btn{
-    margin-bottom: 20px;
+    .hero_btn{
+    margin-bottom: 45px;
     width: 245px;
 }
 }
@@ -425,25 +377,27 @@ align-items: center;
     height: 350px;
 }
 @media screen and (min-width: 768px) {
-.hero-img {
-    position:absolute;
+    .hero-img {
+    position: absolute;
+    right: 10px;
     bottom: 0;
-    right: 15px;
-    opacity: 25%;
-    width: 630px;
-    height: 635px;
+    width: 410px;
+    height: 430px;
+}
+}
+
+@media screen and (min-width: 991px) {
+    .hero-img {
+        right: -110px;
+        width: 515px;
+        height: 540px;
     }
 }
 @media screen and (min-width: 1200px) {
-    .hero-img {
-        opacity: 100%;
-    }
-}
-@media screen and (min-width: 1280px) {
 .hero-img {
-    right: 100px;
+    right: 50px;
     width: 630px;
-    height: 635px;
+    height: 630px;
     }
 }
 
@@ -558,10 +512,8 @@ margin-left: 28px;
     background-position: top 0 right 0, top right;
 }
 
-.about>.container {
-    position: relative;
-}
-@media screen and(min-width:991px ) {
+
+@media screen and(min-width:1200px ) {
 .about>.container {
     display: flex;
     flex-direction: row;
@@ -597,34 +549,24 @@ margin-left: 28px;
     line-height: 27px;
 }
 }
-
-.img-container {
-    position: static;
+.img-container{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    margin: 0 auto;
 }
-@media screen and(min-width:1200px){
-.img-container {
-        position: absolute;
-        top: 0;
-        right: 0;
-    }
-}
-    
 
-
-
-    .img-container-firstnote {
+ .img-firstnote {
         font-family: 'Nunito Sans';
         font-weight: 400;
-        font-size: 64px;
-        line-height: 87px;
-        bottom: 35px;
-        right: 100px;
-        position: absolute;
-        right: 90px;
-        bottom: 120px;
-        
+        font-size: 34px;
+            line-height: 37px;
+        /* position: absolute; */
+        /* right: 90px;
+        bottom: 120px;   */
     }
-    .img-container-firstnote::after {
+/* .img-firstnote::after {
         content: 'студентів';
         font-weight: 600;
         font-size: 32px;
@@ -632,18 +574,18 @@ margin-left: 28px;
         position: absolute;
         right: -70px;
         bottom: -25px;
-    }
+    } */
 
-.img-container-secondnote {
+.img-secondnote {
         font-family: 'Nunito Sans';
         font-weight: 400;
-        font-size: 64px;
-        line-height: 87px;
-        position: absolute;
-        bottom: -76px;
-        left: 200px;
+        font-size: 34px;
+            line-height: 37px;
+        /* position: absolute; */
+        /* bottom: -76px;
+        left: 200px; */
     }
-.img-container-secondnote::after {
+/* .img-secondnote::after {
         content: 'lorem input';
         font-weight: 600;
         font-size: 32px;
@@ -651,7 +593,7 @@ margin-left: 28px;
         position: absolute;
         right: -70px;
         bottom: -25px;
-    }
+    } */
 
 .about-img{
     width:633px;
