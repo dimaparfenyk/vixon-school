@@ -647,7 +647,7 @@ bottom: 0px;
 }  
 @media screen and (min-width:1200px) {
 .about-note >span{
-font-weight: 600;
+    font-weight: 600;
     font-size: 32px;
     line-height: 44px;
     bottom: -29px;
@@ -671,35 +671,61 @@ font-weight: 600;
     }
 }
 
-
-.footer-about{
+/* ---------SECTION POSTABOUT------------  */
+.postabout{
     background-color: #6BBC60;
     min-height: 298px;
+    padding-top: 48px;
+        padding-bottom: 50px;
 }
 
-.footer-about_container{
-padding-top: 49px;
-padding-bottom: 49px;
-}
-
-.footer-about_list{
-    display: flex;
-    flex-direction: row;
+.postabout-box{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(80px, 165px));
+    gap: 25px 85px;
     justify-content: center;
 }
+@media screen and (min-width: 768px){ 
+.postabout-box {
+    grid-template-columns: repeat(auto-fit, minmax(80px, 148px));
+    gap: 25px 48px;
+}
+}
+@media screen and (min-width: 1200px) {
+    .postabout-box {
+        grid-template-columns: repeat(auto-fit, minmax(80px, 225px));
+        gap: 25px 45px;
+    }
+}
+@media screen and (min-width: 1280px) {
+    .postabout-box {
+        grid-template-columns: repeat(auto-fit, minmax(80px, 230px));
+        gap: 25px 72px;
+    }
+}
+.postabout-box_description{
+    display: flex;
+    flex-direction: column;
+}
 
-.footer-about_list li:not(:last-child){
+/* .postabout_list li:not(:last-child){
     margin-right: 129px;
 }
-.footer-about_list li{
+.postabout_list li{
     width: 166px;
+} */
+
+.postabout-box_item > img{
+    margin-bottom: 26px;
 }
 
-.footer-about_list img{
-    margin-bottom: 18px;
+.postabout-box_item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
 }
-
-.footer-about_list span{
+.postabout-box span{
     color: var(--second-text-color);
     font-weight: 700;
     font-size: 24px;
