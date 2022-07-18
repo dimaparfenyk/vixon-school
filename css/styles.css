@@ -321,7 +321,7 @@ flex-direction: column;
 justify-content: center;
 }
 }
-.hero_text{
+.section_text{
     max-width: 360px;
     margin-bottom: 24px;
     font-weight: 400;
@@ -331,7 +331,7 @@ justify-content: center;
     text-shadow: 3px 3px 6px rgba(21, 20, 8, 0.25);
 }
 @media screen and (min-width: 1200px) {
-    .hero_text {
+    .section_text {
     max-width: 450px;
     margin-bottom: 36px;
     font-size: 20px;
@@ -352,10 +352,10 @@ justify-content: center;
     font-family: inherit;
     text-transform: uppercase;
     font-weight: 700;
-    font-size: 14px;
+    font-size: 13px;
     line-height: 19px;
 
-    width: 285px;
+    min-width: 285px;
     height: 48px;
 
     background-color: var(--main-button-color);
@@ -370,6 +370,10 @@ justify-content: center;
 .btn:focus{
     background-color:#f7a71c;
 }
+@media screen and (min-width: 768px){
+    .btn{
+font-size: 14px;
+}} 
 @media screen and (max-width: 767px) {
     .hero_btn{
     margin-bottom: 45px;
@@ -411,7 +415,7 @@ justify-content: center;
 
 .courses{
     padding-top: 80px;
-    padding-bottom: 174px;
+    padding-bottom: 173px;
     background-image: url('../images/Courses/courses-bg.png');
     background-repeat: no-repeat;
     background-position: bottom 0 left 0, bottom left;
@@ -448,7 +452,6 @@ justify-content: center;
 @media screen and (min-width: 1280px) {
     .courses-box_list {
     grid-template-columns: repeat(auto-fit, minmax(80px, 256px));
-    gap: 25px 72px;
     }
 }
 
@@ -483,11 +486,11 @@ justify-content: center;
     }
 }
 @media screen and (min-width: 1200px) {
-            .courses-box_list>li>div {
-            width: 221px;
-            height: 221px;
-            }
+    .courses-box_list>li>div {
+        width: 221px;
+        height: 221px;
         }
+    }
 
 .courses img{
     margin: 0 auto;
@@ -540,97 +543,101 @@ bottom: 0px;
 }
 
 
+.about-subtitle{
+    margin-bottom: 42px;
+}
+@media screen and (min-width:768px){
+    .about-subtitle {
+        margin-bottom: 80px;
+    }
+}
+   
+/* .about >.container {
+    display: flex;
+    align-items: center;
+} */
+@media screen and(min-width:768px) {
+       .about-container {
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+       }
+   }
 @media screen and(min-width:1200px ) {
-.about>.container {
+.about-container {
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-evenly;
     }
 }
 
-.about_subtext{
+.about_subtext {
     font-weight: 600;
     font-size: 32px;
     line-height: 44px;
     margin-bottom: 32px;
 }
 
-.about_text{
+.about .text {
+    color: var(--primary-text-color);
+}
+
+.about-img-box{
+    position: relative;
+    margin-bottom: 50px;
+}
+
+.firstnote{
+ display: none;
+}
+@media screen and (min-width:480px) {
+    .firstnote{
+    display: inline-block;
+    position: absolute;
+    right: 60px;
+    bottom: 54px;
+
     font-weight: 400;
-    font-size: 16px;
-    line-height: 1.56;
-    letter-spacing: 0.03em;
-    margin-bottom: 32px;
-    text-align: justify;
-    max-width: 584px;
-}
-@media screen and (min-width: 768px) {
-.about_text {
     font-size: 18px;
-    line-height: 25px;
-}}
-@media screen and (min-width: 1200px) {
-.about_text {
-    font-size: 20px;
-    line-height: 27px;
+    line-height: 20px;
 }
 }
-.img-container{
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    justify-content: center;
-    margin: 0 auto;
-}
-
- .img-firstnote {
-        font-family: 'Nunito Sans';
-        font-weight: 400;
-        font-size: 34px;
-            line-height: 37px;
-        /* position: absolute; */
-        /* right: 90px;
-        bottom: 120px;   */
+@media screen and (min-width:768px) {
+    .firstnote {
+        right: 15px;
+            bottom: 219px;
+            font-size: 25px;
+            line-height: 22px;
     }
-/* .img-firstnote::after {
-        content: 'студентів';
-        font-weight: 600;
-        font-size: 32px;
-        line-height: 44px;
-        position: absolute;
-        right: -70px;
-        bottom: -25px;
-    } */
-
-.img-secondnote {
-        font-family: 'Nunito Sans';
-        font-weight: 400;
-        font-size: 34px;
-            line-height: 37px;
-        /* position: absolute; */
-        /* bottom: -76px;
-        left: 200px; */
-    }
-/* .img-secondnote::after {
-        content: 'lorem input';
-        font-weight: 600;
-        font-size: 32px;
-        line-height: 44px;
-        position: absolute;
-        right: -70px;
-        bottom: -25px;
-    } */
-
-.about-img{
-    width:633px;
-    height: 278px;
 }
+.secondnote {
+    display: none;
+}
+@media screen and (min-width:480px) {
+.secondnote{
+    display: inline-block;
+    position: absolute;
+    right: 130px;
+    bottom: -16px;
+
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 20px;
+}
+}
+@media screen and (min-width:768px) {
+    .secondnote {
+        right: 100px;
+        bottom: 145px;
+        font-size: 25px;
+        line-height: 22px;
+    }
+}
+
 
 .footer-about{
     background-color: #6BBC60;
     min-height: 298px;
-
 }
 
 .footer-about_container{
