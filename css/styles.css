@@ -281,26 +281,6 @@ a {
     }
 }
 
-
-.top-bg-img {
-    display: none;
-}
-@media screen and (min-width: 768px) {
-    .top-bg-img {
-        display: block;
-        position: absolute;
-        top: -80px;
-        left: 145px;
-    }
-}
-@media screen and (min-width: 1200px) {
-.top-bg-img{
-    position: absolute;
-    top: -80px;
-    left: 430px;
-    }
-}
-
 .hero_title {
     color: var(--second-text-color);
     margin-bottom: 28px;
@@ -542,32 +522,24 @@ bottom: 0px;
     background-position: top 0 right 0, top right;
 }
 
-
 .about-subtitle{
     margin-bottom: 42px;
 }
 @media screen and (min-width:768px){
     .about-subtitle {
-        margin-bottom: 80px;
+        margin-bottom: 82px;
     }
 }
    
-/* .about >.container {
-    display: flex;
-    align-items: center;
-} */
-@media screen and(min-width:768px) {
-       .about-container {
-        display: flex;
-        flex-direction: row-reverse;
-        align-items: center;
-       }
-   }
-@media screen and(min-width:1200px ) {
 .about-container {
     display: flex;
-    flex-direction: row;
-    align-items: center;
+    flex-direction: column;
+}
+@media screen and (min-width:768px) 
+{
+    .about-container {
+        flex-direction: row-reverse;
+        justify-content: space-around;
     }
 }
 
@@ -578,8 +550,24 @@ bottom: 0px;
     margin-bottom: 32px;
 }
 
-.about .text {
+.about_text {
     color: var(--primary-text-color);
+    max-width: 450px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 25px;
+    text-shadow: 3px 3px 6px rgba(21, 20, 8, 0.25);
+        }
+@media screen and (min-width: 1200px) {
+    .about_text {
+        max-width: 584px;
+        font-size: 20px;
+        line-height: 27px;
+    }
+}
+.about_text+.about_text{
+    margin-top: 22px;
+    margin-bottom: 36px;
 }
 
 .about-img-box{
@@ -594,21 +582,30 @@ bottom: 0px;
     .firstnote{
     display: inline-block;
     position: absolute;
-    right: 60px;
-    bottom: 54px;
+    right: 130px;
+    bottom: 55px;
 
     font-weight: 400;
-    font-size: 18px;
+    font-size: 25px;
     line-height: 20px;
 }
 }
 @media screen and (min-width:768px) {
     .firstnote {
-        right: 15px;
-            bottom: 219px;
-            font-size: 25px;
-            line-height: 22px;
+        right: 110px;
+        bottom: 235px;
     }
+}
+@media screen and (min-width:1200px){
+   .firstnote{
+    font-family: 'Nunito Sans';
+    font-style: normal;
+    font-size: 64px;
+    line-height: 87px;
+
+    bottom: 45px;
+    right: 83px;
+   } 
 }
 .secondnote {
     display: none;
@@ -617,20 +614,60 @@ bottom: 0px;
 .secondnote{
     display: inline-block;
     position: absolute;
-    right: 130px;
+    right: 205px;
     bottom: -16px;
 
     font-weight: 400;
-    font-size: 18px;
+    font-size: 25px;
     line-height: 20px;
 }
 }
 @media screen and (min-width:768px) {
     .secondnote {
-        right: 100px;
-        bottom: 145px;
-        font-size: 25px;
-        line-height: 22px;
+    right: 192px;
+    bottom: 172px;
+    }
+}
+@media screen and (min-width:1200px) {
+    .secondnote {
+        font-size: 64px;
+        line-height: 87px;
+        bottom: -40px;
+        right: 318px;
+    }
+}
+
+@media screen and (min-width:480px) {
+    .about-note >span {
+        position: absolute;
+        bottom: -20px;
+        right: -65px;
+        font-size: 18px;
+    }
+}  
+@media screen and (min-width:1200px) {
+.about-note >span{
+font-weight: 600;
+    font-size: 32px;
+    line-height: 44px;
+    bottom: -29px;
+    right: -130px;
+}}
+
+@media screen and (min-width:1200px) {
+    .about-img {
+        position: absolute;
+        top: -30px;
+        right: 39px;
+        max-width: 633px;
+    } 
+}
+
+@media screen and (min-width:1200px){
+    .about-content-box{
+        margin-right: auto;
+        top: -28px;
+        right: 39px;
     }
 }
 
