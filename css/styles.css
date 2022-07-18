@@ -737,14 +737,16 @@ bottom: 0px;
     padding-top: 160px;
     padding-bottom: 160px;
 }
+.sertificats> .subtitle{
+    margin-bottom: 48px;
+}
+
 .sertificats-box{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(90px, 316px));
+    gap: 12px 28px;
     justify-content: center;
-    margin: 0 auto;
 }
 .sertificats-box_item{
-flex-basis: calc(100% / 3 - 28px);
-width: 370px;
+
 }
