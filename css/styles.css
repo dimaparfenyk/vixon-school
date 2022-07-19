@@ -393,13 +393,21 @@ font-size: 14px;
 
 /* ---------------------------SECTION COURSES------------------- */
 
-.courses{
+.courses {
     padding-top: 80px;
-    padding-bottom: 173px;
+    padding-bottom: 110px;
+    margin-bottom: -40px;
     background-image: url('../images/Courses/courses-bg.png');
     background-repeat: no-repeat;
     background-position: bottom 0 left 0, bottom left;
 }
+@media screen and (min-width:768px) {
+   .courses{
+    padding-bottom: 173px;
+   } 
+}
+        
+
 .subtitle{
     margin-bottom: 63px;
     text-align: center;
@@ -515,11 +523,16 @@ bottom: 0px;
 
 /* -------------Section About------------- */
 
-.about{
-    padding-bottom: 183px;
+.about {
+    padding-bottom: 110px;
     background-image: url('../images/about/about-bg.png');
     background-repeat: no-repeat;
     background-position: top 0 right 0, top right;
+}
+@media  screen and (min-width:768px) {
+.about {
+    padding-bottom: 160px;
+}
 }
 
 .about-subtitle{
@@ -640,8 +653,9 @@ bottom: 0px;
 @media screen and (min-width:480px) {
     .about-note >span {
         position: absolute;
-        bottom: -20px;
-        right: -65px;
+        top: 25px;
+        left: calc(100% - 20px);
+        display: block;
         font-size: 18px;
     }
 }  
@@ -650,8 +664,8 @@ bottom: 0px;
     font-weight: 600;
     font-size: 32px;
     line-height: 44px;
-    bottom: -29px;
-    right: -130px;
+    top: 70px;
+    left: calc(100% - 65px);
 }}
 
 @media screen and (min-width:1200px) {
@@ -676,7 +690,7 @@ bottom: 0px;
     background-color: #6BBC60;
     min-height: 298px;
     padding-top: 48px;
-        padding-bottom: 50px;
+    padding-bottom: 50px;
 }
 
 .postabout-box{
@@ -708,13 +722,6 @@ bottom: 0px;
     flex-direction: column;
 }
 
-/* .postabout_list li:not(:last-child){
-    margin-right: 129px;
-}
-.postabout_list li{
-    width: 166px;
-} */
-
 .postabout-box_item > img{
     margin-bottom: 26px;
 }
@@ -722,21 +729,31 @@ bottom: 0px;
 .postabout-box_item {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    
+    align-items: center;  
 }
+        
 .postabout-box span{
     color: var(--second-text-color);
-    font-size: 24px;
-    line-height: 33px;
+    font-size: 16px;
+    line-height: 22px;
     text-align: center; 
 }
+@media screen and (min-width:1200px) {
+.postabout-box span {
+    font-size: 24px;
+    line-height: 33px;
+}
+}
+
 /* --------Section sertificats====== */
 
 .sertificats{
     padding-top: 160px;
-    padding-bottom: 160px;
+    background-image: url('../images/Sertificats/bg-img.png');
+    background-repeat: no-repeat;
+    background-position: top -135px right -85px, top right;
 }
+
 .sertificats> .subtitle{
     margin-bottom: 48px;
 }
@@ -748,5 +765,17 @@ bottom: 0px;
     justify-content: center;
 }
 .sertificats-box_item{
+    border: 2px solid var(--active-component-color);
+    border-radius: 8px;
+}
+.sertificats img{
+    margin-bottom: -5px;
+}
+/* ------------SECTION REVIEW-------------------- */
 
+.review{
+    padding-top: 160px;
+}
+.review >.subtitle{
+    margin-bottom: 49px;
 }
