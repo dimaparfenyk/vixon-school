@@ -776,14 +776,20 @@ border: 2px solid var(--active-component-color);
 }
 /* ------------SECTION REVIEW-------------------- */
 
-.review{
-    padding-top: 160px;
-    padding-bottom: 160px;
-    background-image: linear-gradient(
-        to bottom,
+.review {
+    padding-top: 75px;
+    padding-bottom: 75px;
+    background-image: linear-gradient(to bottom,
         #ffffff 50%,
         #F4FFF6 50%);
 }
+@media screen and (min-width:1280px) {
+.review {
+        padding-top: 160px;
+        padding-bottom: 160px;
+    }
+}
+
 .review >.subtitle{
     margin-bottom: 49px;
 }
