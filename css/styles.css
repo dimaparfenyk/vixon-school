@@ -767,9 +767,9 @@ background-image: url('../images/Sertificats/bg-img.png');
 .sertificats-box_item{
     border-radius: 8px;
 }
-.sertificats-box_item:hover{
+/* .sertificats-box_item:hover{
 border: 2px solid var(--active-component-color);
-}
+} */
 
 .sertificats img{
     margin-bottom: -5px;
@@ -817,7 +817,11 @@ border: 2px solid var(--active-component-color);
         height: 291px;
     }
 }
-
+.review-container{
+    display: flex;
+    margin-right: 32px;
+    margin-left: 32px;
+}
 .review-card:nth-child(n+3) {
     display: none;
 }
@@ -829,8 +833,6 @@ border: 2px solid var(--active-component-color);
 
 .review-card{
     padding: 8px;
-    margin-right: 5px;
-    margin-left: 5px;
     width: 210px;
 
     display: flex;
@@ -844,24 +846,28 @@ border: 2px solid var(--active-component-color);
 .review-card { 
     width: 311px;
     height: 252px;
-    margin-right: 10px;
-    margin-left: 10px;
 }
 }
 @media screen and (min-width:1280px) {
     .review-card {
         padding: 24px;
-        margin-right: 21px;
-            margin-left: 21px;
     }
+}
+.review-card+.review-card{
+    margin-left: 20px;
 }
 
 .user {
     margin-bottom: 10px;
 }
-@media screen and(min-width:991px) {
+@media screen and (min-width:991px) {
 .user {
         margin-bottom: 24px;
+    }
+}
+@media screen and (min-width:1280px) {
+    .user {
+        margin-bottom: 16px;
     }
 }
 
@@ -905,7 +911,6 @@ margin-right: 24px;
 margin-bottom: 16px
 }
 }
-
 
 .review-date{
     font-weight: 400;
