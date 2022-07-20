@@ -39,7 +39,7 @@ input {
 }
 
 body {
-    background: var(#ffffff);
+    background: var(--second-text-color);
     color: var(--primary-text-color);
     font-family: Nunito Sans, Roboto, Arial, Helvetica, sans-serif;
     box-sizing: border-box;
@@ -804,6 +804,7 @@ border: 2px solid var(--active-component-color);
     display: flex;
     flex-direction: row;
     align-items: center;
+    margin-bottom: 32px;
 }
 @media screen and (min-width:991px) {
 .review-box {
@@ -814,7 +815,6 @@ border: 2px solid var(--active-component-color);
     .review-box {
         width: 1118px;
         height: 291px;
-        margin-bottom: 32px;
     }
 }
 
@@ -951,23 +951,38 @@ position: relative;
     opacity: 0.5;
 }
 
-
 /* -------------------Footer------------------------- */
 
-footer{
+.footer{
     background-color: var(--primary-text-color);
-color: var(--second-text-color);
-padding-top: 40px;
-padding-bottom: 60px;
+    color: var(--second-text-color);
+    padding-top: 40px;
+    padding-bottom: 60px;
 }
 
-footer>.container{
+.footer>.container{
     display: flex;
     flex-direction: row;
+    justify-content: center;
+    align-items: center;
 }
+
+@media screen and (min-width:768px) {
+    .logo-link {
+        margin-right: 36px;
+    }
+}
+@media screen and (min-width:1200px) {
+    .logo-link{
+        margin-right: 70px;
+    }
+}
+@media screen and (min-width:1280px) {
 .logo-link{
     margin-right: 116px;
+    }
 }
+
 .footer-infobox{
     display: flex;
     flex-direction: column;
@@ -976,11 +991,25 @@ footer>.container{
 .footer_list{
 display: flex;
 flex-direction: row;
-margin-bottom: 34px;
+margin-bottom: 24px;
 }
+@media screen and (min-width:1280px) {
+.footer_list {
+    margin-bottom: 34px;
+}
+}
+
+@media screen and (min-width:768px) {
+.footer_list li:not(:last-child) {
+    margin-right: 45px;
+}
+}
+@media screen and (min-width:1280px) {
 .footer_list li:not(:last-child){
     margin-right: 80px;
 }
+}
+
 .footer_list a{
     font-weight: 400;
     font-size: 14px;
@@ -998,25 +1027,35 @@ margin-bottom: 34px;
     line-height: 150%;
     color: var(--second-text-color);
 }
-.address-icon{
-    width: 20px;
-    height: 26px;
-    margin-right: 33px;
-}
-.address-box{
+
+/* .address-box{
     display: flex;
     flex-direction: row;
-    margin-right: 64px;
 }
 .shedule-box{
     display: flex;
-    flex-direction: row;
-    margin-right: 64px;
+  
+    
+} */
+.contact-box{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
-.shedule-box img{
-    width: 26px;
-    height: 26px;
+@media screen and (min-width:1280px) {
+.contact-box {
+        flex-direction: row;
+        justify-content: space-around;
+    }
 }
+.tel-box {
+        margin-bottom: 6px;
+    }
+@media screen and (min-width:1280px) {
+.tel-box {
+margin-right: 64px;
+margin-bottom: 0;
+}}
 
 .shedule-box div{
     display: flex;
@@ -1025,18 +1064,34 @@ margin-bottom: 34px;
     font-size: 12px;
     line-height: 150%;
 }
-.shedule-icon{
-width: 26px;
-height: 26px;
-margin-right: 32px;
-}
 .left-shed{
-    margin-right: 31px;
+margin-right: 6px;
+}
+@media screen and (min-width:1200px) {
+.left-shed {
+        margin-right: 31px;
+    }
 }
 
-.tel-box{
+.box{
     display: flex;
-    margin-right: 64px;
+    flex-direction: row;
+    
+}
+@media screen and (min-width:768px) {
+    .box {
+        margin-right: 32px;
+    }
+}
+@media screen and (min-width:1200px) {
+.box {
+margin-right: 36px;
+}
+}
+@media screen and (min-width:1280px) {
+.box {
+margin-right: 64px;
+}
 }
 .tel-box a{
     color: inherit;
@@ -1053,8 +1108,52 @@ margin-right: 32px;
     font-size: 12px;
     line-height: 16px;
 }
-.contact-icon{
-width: 24px;
-height: 24px;
-margin-right: 33px;
+
+.shedule-icon {
+    width: 26px;
+    height: 26px;
+    margin-right: 8px;
 }
+/* @media screen and (min-width:768px) {
+    .shedule-icon {
+        margin-right: 8px;
+    }
+} */
+@media screen  and (min-width:1280px) {
+.shedule-icon {
+        margin-right: 32px;
+    }
+}
+
+.contact-icon {
+    margin-right: 8px;
+    width: 24px;
+    height: 24px;
+}
+/* @media screen and (min-width:768px) {
+    .contact-icon {
+        margin-right: 8px;
+    }
+} */
+@media screen and (min-width:1280px) {
+.contact-icon {
+        margin-right: 33px;
+    }
+}
+
+.address-icon {
+    width: 20px;
+    height: 26px;
+    margin-right: 8px;
+}
+/* @media screen and (min-width:768px) {
+    .address-icon {
+        margin-right: 8px;
+    }
+} */
+@media screen and (min-width:1280px) {
+.address-icon {
+        margin-right: 33px;
+    }
+}
+
