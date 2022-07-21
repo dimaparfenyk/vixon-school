@@ -405,7 +405,6 @@ font-size: 14px;
    } 
 }
         
-
 .subtitle{
     margin-bottom: 63px;
     text-align: center;
@@ -418,35 +417,40 @@ font-size: 14px;
 
 .courses-box_list{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(80px, 165px));
-    gap: 25px 85px;
+    grid-template-columns: auto auto;
+    gap: 10px 15px;
     justify-content: center;
+}
+@media screen and (min-width: 480px) {
+.courses-box_list{
+    gap: 25px 48px;
+    
+}
 }
 @media screen and (min-width: 768px) {
     .courses-box_list{
-        grid-template-columns: repeat(auto-fit, minmax(80px, 148px));
-        gap: 25px 48px;
-
+        grid-template-columns: auto auto auto auto;
     }
 }
 @media screen and (min-width: 1200px) {
     .courses-box_list {
-        grid-template-columns: repeat(auto-fit, minmax(80px, 238px));
         gap: 25px 72px;
     }
 }
-@media screen and (min-width: 1280px) {
-    .courses-box_list {
-    grid-template-columns: repeat(auto-fit, minmax(80px, 256px));
-    }
-}
+
 
 .courses-box_list li {
     position: relative;
     margin-bottom: 40px;
     margin-right:  auto;
     margin-left: auto;
-    height: 185px;
+    height: 150px;
+    ;
+}
+@media screen and (min-width: 768px) {
+    .courses-box_list li {
+        height: 185px
+    }
 }
 @media screen and (min-width: 1200px){
 .courses-box_list li {
@@ -460,8 +464,8 @@ font-size: 14px;
     align-items: center;
     justify-content: center;
     margin: 0 auto;
-    width: 185px;
-    height: 185px;
+    width: 130px;
+    height: 130px;
     border-radius: 50%;
     background: #6BBC60;
 }
@@ -745,9 +749,20 @@ bottom: 0px;
 
 /* --------Section sertificats====== */
 .sert-review{
+    position: relative;
     background-image: url('../images/Sertificats/bg-img.png');
     background-repeat: no-repeat;
     background-position: top -135px right -60px, top right;
+}
+.sert-review::after{
+    content: ' ';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 274px;
+    background-color: var(--main-background-color);
 }
 .sertificats{
     padding-top: 160px;
@@ -765,10 +780,8 @@ bottom: 0px;
 }
 .sertificats-box_item{
     border-radius: 8px;
+    border: 2px solid var(--active-component-color);
 }
-/* .sertificats-box_item:hover{
-border: 2px solid var(--active-component-color);
-} */
 
 .sertificats img{
     margin-bottom: -5px;
@@ -777,11 +790,10 @@ border: 2px solid var(--active-component-color);
 /* ------------SECTION REVIEW-------------------- */
 
 .review {
+    position:relative;
+    z-index: 55;
     padding-top: 75px;
     padding-bottom: 75px;
-    background-image: linear-gradient(to bottom,
-        #ffffff 50%,
-        #F4FFF6 50%);
 }
 @media screen and (min-width:1280px) {
 .review {
@@ -905,7 +917,10 @@ border: 2px solid var(--active-component-color);
 }
 
 .reviewer-img{
-margin-right: 24px;
+    width: 50px;
+    height: 50px;
+    margin-right: 24px;
+    object-fit: cover;  
 }
 
 .reviewer-avatar {
