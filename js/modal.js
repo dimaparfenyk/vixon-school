@@ -643,119 +643,330 @@
 //  return newArr
 //   // Change code above this line
 // }
-function changeEven(numbers, value) {
-  const newArr = numbers.map(number => {
-    const isNumberEven = number % 2 === 0;
-   return isNumberEven?(number + value):number
-  //   if (isNumberEven) {
-  //   return  number + value;
-  //   }
-  //  return number
-  })
-  console.log(newArr)
-  return newArr
-}
-changeEven([1, 2, 3, 4, 5], 10)
+// function changeEven(numbers, value) {
+//   const newArr = numbers.map(number => {
+//     const isNumberEven = number % 2 === 0;
+//    return isNumberEven?(number + value):number
+//   //   if (isNumberEven) {
+//   //   return  number + value;
+//   //   }
+//   //  return number
+//   })
+//   console.log(newArr)
+//   return newArr
+// }
+// changeEven([1, 2, 3, 4, 5], 10)
 
-const planets = ["Earth", "Mars", "Venus", "Jupiter"];
-// Change code below this line
-const planetsLengths = planets.map(planet => planet.length );
-console.log(planetsLengths)
+// const planets = ["Earth", "Mars", "Venus", "Jupiter"];
+// // Change code below this line
+// const planetsLengths = planets.map(planet => planet.length );
+// console.log(planetsLengths)
 
 
-const friends = [
-  "Briana Decker", "Sharron Pace", "Sharron Pace", "Marilyn Mcintosh",
-  "Padilla Garrison", "Naomi Buckner", "Goldie Gentry", "Aisha Tran",
-  "Jordan Sampson", "Eddie Strong", "Jacklyn Lucas", "Linda Chapman",
-  "Goldie Gentry", "Briana Decker"]
+// const friends = [
+//   "Briana Decker", "Sharron Pace", "Sharron Pace", "Marilyn Mcintosh",
+//   "Padilla Garrison", "Naomi Buckner", "Goldie Gentry", "Aisha Tran",
+//   "Jordan Sampson", "Eddie Strong", "Jacklyn Lucas", "Linda Chapman",
+//   "Goldie Gentry", "Briana Decker"]
 
-const getFriends = (users) => {
-   const allFriends=users.flatMap(user=>user.friends);
-  return allFriends.filter((friend,index,arr)=>arr.indexOf(friend)===index)
-};
+// const getFriends = (users) => {
+//    const allFriends=users.flatMap(user=>user.friends);
+//   return allFriends.filter((friend,index,arr)=>arr.indexOf(friend)===index)
+// };
 
-const sortByName = users => [...users].sort((firstUser, secondUser) => firstUser.name.localeCompare(secondUser.name));
+// const sortByName = users => [...users].sort((firstUser, secondUser) => firstUser.name.localeCompare(secondUser.name));
 
-const users=[
-  {
-    name: "Moore Hensley",
-    email: "moorehensley@indexia.com",
-    eyeColor: "blue",
-    friends: ["Sharron Pace"],
-    isActive: false,
-    balance: 2811,
-    gender: "male"
-  },
-  {
-    name: "Sharlene Bush",
-    email: "sharlenebush@tubesys.com",
-    eyeColor: "blue",
-    friends: ["Briana Decker", "Sharron Pace"],
-    isActive: true,
-    balance: 3821,
-    gender: "female"
-  },
-  {
-    name: "Ross Vazquez",
-    email: "rossvazquez@xinware.com",
-    eyeColor: "green",
-    friends: ["Marilyn Mcintosh", "Padilla Garrison", "Naomi Buckner"],
-    isActive: false,
-    balance: 3793,
-    gender: "male"
-  },
-  {
-    name: "Elma Head",
-    email: "elmahead@omatom.com",
-    eyeColor: "green",
-    friends: ["Goldie Gentry", "Aisha Tran"],
-    isActive: true,
-    balance: 2278,
-    gender: "female"
-  },
-  {
-    name: "Carey Barr",
-    email: "careybarr@nurali.com",
-    eyeColor: "blue",
-    friends: ["Jordan Sampson", "Eddie Strong", "Adrian Cross"],
-    isActive: true,
-    balance: 3951,
-    gender: "male"
-  },
-  {
-    name: "Blackburn Dotson",
-    email: "blackburndotson@furnigeer.com",
-    eyeColor: "brown",
-    friends: ["Jacklyn Lucas", "Linda Chapman", "Adrian Cross", "Solomon Fokes"],
-    isActive: false,
-    balance: 1498,
-    gender: "male"
-  },
-  {
-    name: "Sheree Anthony",
-    email: "shereeanthony@kog.com",
-    eyeColor: "brown",
-    friends: ["Goldie Gentry", "Briana Decker"],
-    isActive: true,
-    balance: 2764,
-    gender: "female"
-  }
-]
+// const users=[
+//   {
+//     name: "Moore Hensley",
+//     email: "moorehensley@indexia.com",
+//     eyeColor: "blue",
+//     friends: ["Sharron Pace"],
+//     isActive: false,
+//     balance: 2811,
+//     gender: "male"
+//   },
+//   {
+//     name: "Sharlene Bush",
+//     email: "sharlenebush@tubesys.com",
+//     eyeColor: "blue",
+//     friends: ["Briana Decker", "Sharron Pace"],
+//     isActive: true,
+//     balance: 3821,
+//     gender: "female"
+//   },
+//   {
+//     name: "Ross Vazquez",
+//     email: "rossvazquez@xinware.com",
+//     eyeColor: "green",
+//     friends: ["Marilyn Mcintosh", "Padilla Garrison", "Naomi Buckner"],
+//     isActive: false,
+//     balance: 3793,
+//     gender: "male"
+//   },
+//   {
+//     name: "Elma Head",
+//     email: "elmahead@omatom.com",
+//     eyeColor: "green",
+//     friends: ["Goldie Gentry", "Aisha Tran"],
+//     isActive: true,
+//     balance: 2278,
+//     gender: "female"
+//   },
+//   {
+//     name: "Carey Barr",
+//     email: "careybarr@nurali.com",
+//     eyeColor: "blue",
+//     friends: ["Jordan Sampson", "Eddie Strong", "Adrian Cross"],
+//     isActive: true,
+//     balance: 3951,
+//     gender: "male"
+//   },
+//   {
+//     name: "Blackburn Dotson",
+//     email: "blackburndotson@furnigeer.com",
+//     eyeColor: "brown",
+//     friends: ["Jacklyn Lucas", "Linda Chapman", "Adrian Cross", "Solomon Fokes"],
+//     isActive: false,
+//     balance: 1498,
+//     gender: "male"
+//   },
+//   {
+//     name: "Sheree Anthony",
+//     email: "shereeanthony@kog.com",
+//     eyeColor: "brown",
+//     friends: ["Goldie Gentry", "Briana Decker"],
+//     isActive: true,
+//     balance: 2764,
+//     gender: "female"
+//   }
+// ]
 
 // const getNamesSortedByFriendCount =
 //   users => [...users].sort((firstUser, secondUser) => firstUser.friends.length - secondUser.friends.length)
 //     .flatMap(({ friends }) => friends)
 //     // .filter((user,index, arr)=>arr.indexOf(user)===index);
   
-// console.log(getNamesSortedByFriendCount(users)) 
+// console.log(getNamesSortedByFriendCount(users))
 
-// const getSortedFriends = users => 
+// const getSortedFriends = users =>
 //   [...users].flatMap(({ friends }) => friends)
 //     .filter((friend, index, arr) => arr.indexOf(friend) === index)
 //   .sort((firstFriend,secondFriend)=>firstFriend.localeCompare(secondFriend));
 // console.log(getSortedFriends(users))
 
-const getTotalBalanceByGender = (users, gender) => [...users].filter(user => user.gender === gender)
-  .reduce((total, user) => total+user.balance, 0);
-console.log(getTotalBalanceByGender(users, "male"));
-console.log(getTotalBalanceByGender(users, "female"));
+// const getTotalBalanceByGender = (users, gender) => [...users].filter(user => user.gender === gender)
+//   .reduce((total, user) => total+user.balance, 0);
+// console.log(getTotalBalanceByGender(users, "male"));
+// console.log(getTotalBalanceByGender(users, "female"));
+
+
+// const user = {
+//   name: "Mango",
+//   showName() {
+//     console.log("user", user)
+//     console.log("this" , this)
+//   }
+// }
+
+// user.showName();
+
+
+
+// class Car {
+//   // Change code below this line
+//   static MAX_PRICE=50000;
+//   #price;
+
+//   constructor({ price }) {
+//     this.#price = price;
+//   }
+
+//   get price() {
+//     return this.#price;
+//   }
+
+//   set price(newPrice) {
+//     if (newPrice<Car.MAX_PRICE){
+//        this.#price = newPrice;
+//     }
+   
+//   }
+//   // Change code above this line
+// }
+
+// const audi = new Car({ price: 35000 });
+// console.log(audi.price); // 35000
+
+// audi.price = 49000;
+// console.log(audi.price); // 49000
+
+// audi.price = 51000;
+// console.log(audi.price); // 49000
+
+// class User {
+//   email;
+
+//   constructor(email) {
+//     this.email = email;
+//   }
+
+//   get email() {
+//     return this.email;
+//   }
+
+//   set email(newEmail) {
+//     this.email = newEmail;
+//   }
+// }
+
+// class User {
+//   email;
+
+//   constructor(email) {
+//     this.email = email;
+//   }
+
+//   get email() {
+//     return this.email;
+//   }
+
+//   set email(newEmail) {
+//     this.email = newEmail;
+//   }
+// }
+// class Admin extends User {
+//   // Change code below this line
+
+//   static AccessLevel = {
+//     BASIC: "basic",
+//     SUPERUSER: "superuser",
+//   };
+
+//   constructor({ email, accessLevel }) {
+//     super(email);
+//     this.accessLevel = accessLevel;
+//   }
+// blacklistedEmails=[];
+//   blacklist(email){
+//     this.blacklistedEmails.push(email)
+//   }
+//   isBlacklisted(email){
+//   // return  this.blacklistedEmails.includes(email)
+//     return this.blacklistedEmails.some(el=>el===email)
+//   }
+//   // Change code above this line
+// }
+
+// const mango = new Admin({
+//   email: "mango@mail.com",
+//   accessLevel: Admin.AccessLevel.SUPERUSER,
+// });
+
+// console.log(mango.email); // "mango@mail.com"
+// console.log(mango.accessLevel); // "superuser"
+
+// mango.blacklist("poly@mail.com");
+// console.log(mango.blacklistedEmails); // ["poly@mail.com"]
+// console.log(mango.isBlacklisted("mango@mail.com")); // false
+// console.log(mango.isBlacklisted("poly@mail.com")); // true
+
+// const scores = [61, 19, 74, 35, 92, 56];
+// const ascendingScores = [...scores].sort((a, b) => a - b);
+// const descendingScores = [...scores].sort((a, b) => b - a);
+// console.log(ascendingScores); // [19, 35, 56, 61, 74, 92]
+// console.log(descendingScores);
+// console.log(scores);
+
+// const bookShelf = {
+//   authors: ["Бернард Корнуэлл", "Роберт Шекли"],
+//   getAuthors() {
+//     return this.authors;
+//   },
+//   addAuthor(authorName) {
+//     this.authors.push(authorName);
+//   },
+// };
+
+// console.log(bookShelf.getAuthors()); // ["Бернард Корнуэлл", "Роберт Шекли"]
+// bookShelf.addAuthor("Ли Танит");
+// console.log(bookShelf.getAuthors()); // ["Бернард Корнуэлл", "Роберт Шекли", "Ли Танит"]
+
+// function foo() {
+//   console.log(this);
+// }
+
+// foo(); // window без "use strict" и undefined с "use strict"
+
+// const petya = {
+//   username: "Petya",
+//   showThis() {
+//     console.log(this);
+//   },
+//   showName() {
+//     console.log(this.username);
+//   },
+// };
+
+// petya.showThis(); // {username: "Petya", showThis: ƒ, showName: ƒ}
+// petya.showName(); // 'Petya'
+
+// const customer = {
+//   firstName: "Jacob",
+//   lastName: "Mercer",
+//   getFullName() {
+//     return `${this.firstName} ${this.lastName}`;
+//   },
+// };
+
+// function makeMessage(callback) {
+//   // callback() это вызов метода getFullName без объекта
+//   console.log(`Обрабатываем заявку от ${callback.bind(customer)()}.`);
+// }
+
+// makeMessage(customer.getFullName); // Будет ошибка при вызове функции
+
+// const hotel = {
+//   username: "Resort hotel",
+//   showThis() {
+//     const foo = () => {
+//       // Стрелки запоминают контекст во время объявления,
+//       // из родительской области видимости
+//       console.log("this in foo: ", this);
+//     };
+
+//     foo();
+//     console.log("this in showThis: ", this);
+//   },
+// };
+
+// hotel.showThis();
+
+const animal = {
+  legs: 4,
+  eats: true,
+};
+const dog = Object.create(animal);
+dog.barks = true;
+dog.name = "Манго";
+
+for (const key in dog) {
+  if (!dog.hasOwnProperty(key)) continue;
+  console.log(key); // barks, eats
+}
+
+console.log(Object.keys(dog))
+
+// const user = {
+//   name: 'Dima',
+//   surname: 'Ivanov',
+// };
+
+// const myUser = Object.create(user);
+// myUser.phone = 097654322;
+// console.log(user)
+
+// console.log(myUser)
+// console.log(myUser.name)
+// console.log(myUser.surname)
+// console.log(user.isPrototypeOf(myUser))
