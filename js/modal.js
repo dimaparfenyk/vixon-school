@@ -970,3 +970,96 @@ console.log(Object.keys(dog))
 // console.log(myUser.name)
 // console.log(myUser.surname)
 // console.log(user.isPrototypeOf(myUser))
+
+class Hero{
+  static Race = {
+    ELVS: 'elves',
+    HUM: 'humans',
+    DWARF:'dwarfs',
+}
+
+  #secret;
+
+  constructor({ name='', xp='', secret='', race='' }={}) {
+    this._name = name;
+    this.xp = xp;
+    this.#secret = secret;
+    this._race = race;
+  };
+
+  get name() {
+    return this._name;
+  }
+
+  set name(newName) {
+    this._name = newName;
+  };
+
+  get secret() {
+    return this.#secret;
+  };
+
+  set secret(newSecret) {
+    this.#secret = newSecret;
+  };
+
+  get race() {
+    return this._race;
+  };
+
+  set race(newRace) {
+    this._race = newRace;
+  };
+
+  gainXP(value) {
+    this.xp += value;
+    console.log(`У ${this.name} ${this.xp} xp.`)
+  };
+
+};
+
+class Warrior extends Hero{
+  constructor({ name='', xp='', secret='', race='', weapon }) {
+    super({ name, xp, secret, race })
+    this._weapon=weapon
+  }
+  get weapon() {
+    return this._weapon;
+  };
+
+  set weapon(newWeapon) {
+    this._weapon = newWeapon;
+  };
+};
+
+const poly = new Warrior({
+  name: 'Poly',
+  xp: 500,
+  secret: 'rewq',
+  race: Hero.Race.HUM,
+  weapon:'axe'
+});
+
+
+console.log(poly)
+poly.gainXP(200)
+poly.name = 'Weird Poly'
+poly.weapon='gun'
+console.log(poly)
+
+
+
+const mango = new Hero({name:'Mango', xp:1000, secret:'qwer', race:Hero.Race.ELVS});
+// console.log(Object.getPrototypeOf(mango) === Hero.prototype); // {}
+// console.log('Экземпляр класса ', mango)
+// console.log(mango.name, mango.xp);
+// mango.gainXP(100)
+// console.log(mango.name)
+// mango.name='Brave Mango'
+// console.log(mango)
+// console.log(mango.secret)
+// mango.secret = 'ку-ку'
+// mango.race=Hero.Race.DWARF
+// console.log(mango)
+
+
